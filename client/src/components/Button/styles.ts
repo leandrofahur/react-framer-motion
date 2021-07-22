@@ -18,6 +18,8 @@ export const MotionButton = styled(motion.button)`
   margin-top: 1rem;
 
   svg {
+    height: 20px;
+    width: 20px;
     margin-right: 0.5rem;
   }
 `;
