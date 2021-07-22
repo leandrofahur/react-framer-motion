@@ -10,6 +10,7 @@ export const MotionButton = styled(motion.button)`
   font-weight: 400;
 
   border: none;
+  outline: none;
   border-radius: 5px;
 
   color: #fff;

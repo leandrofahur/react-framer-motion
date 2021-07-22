@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <h1>Next.js App</h1>
       <div style={{ width: '50%' }}>
-        <Input type="text">
+        <Input type="text" placeholder="Name">
           <FiAlertCircle />
         </Input>
         <Button background="#de5753">
