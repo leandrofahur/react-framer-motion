@@ -2,14 +2,20 @@ import { ButtonHTMLAttributes } from 'react';
 
 import { MotionButton } from './styles';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  background: string;
+};
 
-export const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
+export const Button: React.FC<ButtonProps> = ({
+  background,
+  children,
+  ...rest
+}) => {
   return (
     <>
       <MotionButton
         type="button"
-        initial={{ background: '#de5753' }}
+        initial={{ background: `${background}` }}
         whileHover={{ filter: 'brightness(0.9)', scale: 1.01 }}
         whileTap={{ color: '#333', scale: 0.99 }}
         transition={{ duration: 0.2 }}

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <h1>Next.js App</h1>
-      <Button>
+      <Button background="#de5753">
         <FiAlertCircle />
         Click Me!
       </Button>
