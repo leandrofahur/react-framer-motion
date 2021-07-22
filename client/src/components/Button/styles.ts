@@ -16,4 +16,8 @@ export const MotionButton = styled(motion.button)`
   /* background: #de5753; */
   padding: 0.5rem 1rem;
   margin-top: 1rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
 `;
