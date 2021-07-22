@@ -16,8 +16,8 @@ export const Button: React.FC<ButtonProps> = ({
       <MotionButton
         type="button"
         initial={{ background: `${background}` }}
-        whileHover={{ filter: 'brightness(0.9)', scale: 1.01 }}
-        whileTap={{ color: '#333', scale: 0.99 }}
+        whileHover={{ filter: 'brightness(0.9)', scale: 1.01, color: '#333' }}
+        whileTap={{ color: '#fff', scale: 0.99 }}
         transition={{ duration: 0.2 }}
       >
         {children}
