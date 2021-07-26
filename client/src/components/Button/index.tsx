@@ -4,10 +4,12 @@ import { MotionButton } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   background: string;
+  priceId: string;
 };
 
 export const Button: React.FC<ButtonProps> = ({
   background,
+  priceId,
   children,
   ...rest
 }) => {
