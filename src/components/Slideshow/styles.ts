@@ -14,7 +14,6 @@ export const SlideshowContainer = styled.div`
 
 export const SlideshowImg = styled(motion.img)`
   position: absolute;
-  margin: auto;
   width: 60%;
   height: fit-content;
 `;
@@ -29,12 +28,12 @@ export const ArrowButton = styled(motion.div)`
 
 export const LeftArrow = styled(ArrowButton)`
   position: absolute;
-  left: 30px;
+  left: 10%;
   z-index: 1;
 `;
 
 export const RightArrow = styled(ArrowButton)`
   position: absolute;
-  right: 30px;
+  right: 10%;
   z-index: 1;
 `;

@@ -19,7 +19,7 @@ interface ISlideshowProps {
 const variants = {
   enter: (direction: number) => {
     return {
-      x: direction > 0 ? '100vh' : '-1000vh',
+      x: direction > 0 ? '10000' : '-100000',
       opacity: 0,
     };
   },
@@ -31,7 +31,7 @@ const variants = {
   exit: (direction: number) => {
     return {
       zIndex: 0,
-      x: direction < 0 ? '100vh' : '-1000vh',
+      x: direction < 0 ? '10000' : '-100000',
       opacity: 0,
     };
   },
@@ -62,8 +62,7 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
           variants={variants}
           initial='enter'
           animate='center'
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          //   transition={{ duration: 1 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 40 }}
           exit='exit'
         />
       </AnimatePresence>
