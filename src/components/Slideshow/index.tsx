@@ -37,6 +37,11 @@ const variants = {
   },
 };
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
+
 export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
   const [[page, direction], setSlide] = useState<[number, number]>([0, 0]);
   const index = wrap(0, imgUrlList.length, page);
@@ -73,6 +78,18 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
           transition={{
             x: { type: 'spring', stiffness: 300, damping: 100 },
             opacity: { duration: 0.2 },
+          }}
+          drag='x'
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+
+            if (swipe < -swipeConfidenceThreshold) {
+              passTheSlide(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              passTheSlide(-1);
+            }
           }}
           exit='exit'
         />
