@@ -14,7 +14,7 @@ export const SlideshowContainer = styled.div`
 
 export const SlideshowImg = styled(motion.img)`
   position: absolute;
-  width: 100%;
+  width: 60%;
   height: fit-content;
 `;
 

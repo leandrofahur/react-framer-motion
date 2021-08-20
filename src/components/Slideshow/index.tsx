@@ -62,7 +62,7 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
       >
         <CgArrowLeftO />
       </LeftArrow>
-      <AnimatePresence>
+      <AnimatePresence initial={false} custom={direction}>
         <SlideshowImg
           key={page}
           src={imgUrlList[index]}
@@ -70,7 +70,10 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
           custom={direction}
           initial='enter'
           animate='center'
-          transition={{ type: 'spring', stiffness: 300, damping: 40 }}
+          transition={{
+            x: { type: 'spring', stiffness: 300, damping: 100 },
+            opacity: { duration: 0.2 },
+          }}
           exit='exit'
         />
       </AnimatePresence>
