@@ -14,26 +14,26 @@ export const SlideshowContainer = styled.div`
 
 export const SlideshowImg = styled(motion.img)`
   position: absolute;
-  width: 60%;
+  width: 100%;
   height: fit-content;
 `;
 
 export const ArrowButton = styled(motion.div)`
   display: flex;
   svg {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 `;
 
 export const LeftArrow = styled(ArrowButton)`
   position: absolute;
-  left: 10%;
-  z-index: 1;
+  left: 5%;
+  z-index: 10;
 `;
 
 export const RightArrow = styled(ArrowButton)`
   position: absolute;
-  right: 10%;
-  z-index: 1;
+  right: 5%;
+  z-index: 10;
 `;

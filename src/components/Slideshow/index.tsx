@@ -48,9 +48,16 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
   return (
     <SlideshowContainer>
       <LeftArrow
-        initial={{ backgroundColor: '#ccc', borderRadius: '50%' }}
-        whileHover={{ scale: 1.05, cursor: 'pointer' }}
-        whileTap={{ scale: 0.95, backgroundColor: '#eee' }}
+        initial={{
+          backgroundColor: 'rgba(245,245,245,0.2)',
+          borderRadius: '50%',
+        }}
+        whileHover={{
+          scale: 1.05,
+          cursor: 'pointer',
+          backgroundColor: 'rgba(245,245,245,0.7)',
+        }}
+        whileTap={{ scale: 0.95, backgroundColor: 'rgba(245,245,245,0.2)' }}
         onClick={() => passTheSlide(-1)}
       >
         <CgArrowLeftO />
@@ -68,9 +75,16 @@ export const Slideshow: React.FC<ISlideshowProps> = ({ imgUrlList }) => {
         />
       </AnimatePresence>
       <RightArrow
-        initial={{ backgroundColor: '#ddd', borderRadius: '50%' }}
-        whileHover={{ scale: 1.05, cursor: 'pointer' }}
-        whileTap={{ scale: 0.95, backgroundColor: '#eee' }}
+        initial={{
+          backgroundColor: 'rgba(245,245,245,0.2)',
+          borderRadius: '50%',
+        }}
+        whileHover={{
+          scale: 1.05,
+          cursor: 'pointer',
+          backgroundColor: 'rgba(245,245,245,0.7)',
+        }}
+        whileTap={{ scale: 0.95, backgroundColor: 'rgba(245,245,245,0.2)' }}
         onClick={() => passTheSlide(1)}
       >
         <CgArrowRightO />
