@@ -27,6 +27,7 @@ function App() {
   return (
     <Container>
       <Slideshow imgUrlList={imageUrlList} />
+      <Slider />
     </Container>
   );
 }
